@@ -6,7 +6,7 @@ const app = express();
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-app.use(express.static('Public', {
+app.use(express.static('public', {
     setHeaders: (res, path) => {
       if (path.endsWith('.css')) {
         res.setHeader('Content-Type', 'text/css');
