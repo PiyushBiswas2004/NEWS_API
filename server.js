@@ -23,7 +23,6 @@ app.use(express.static('public', {
       const response = await axios.get(
         "https://newsapi.org/v2/top-headlines?country=in&apiKey=2d5dcd7ffe8347f2a5786ed207d31c4d",
       );
-      console.log(response.data);
       const articles = response.data.articles;
       res.render("index", { news: articles });
     } catch (error) {
